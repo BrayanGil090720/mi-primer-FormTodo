@@ -23,7 +23,7 @@ const FromTodo =props =>{
     return(
         <form onSubmit={handleSubmit}>
             <div>
-                <div className="input">
+                <div className="file-input">
                     <input 
                     type="text"
                     className="text"

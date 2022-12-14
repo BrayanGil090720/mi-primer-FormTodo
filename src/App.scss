@@ -30,9 +30,66 @@ body{
 $colorRosa: #8f1191;
 $colorHover: #ef4bf2;
 
+
+$colorAzul: #1976D2;
+$colorAzulHover: #03A9F4;
+
 @mixin button ($class, $color, $colorHover) {
   .button.#{$class}{background-color: $color; }
   .button.#{$class}:hover{background: $colorHover; }
   .button.#{$class}:active{background: $color; }
 }
+.button{
+  outline:none;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
 @include button('pink', $colorRosa, $colorHover);
+@include button('ble',$colorAzul ,$colorAzulHover );
+
+
+.file-input{
+  padding: 2px;
+  background: #03A9F4;
+}
+.file-input > .text{
+  outline: none;
+  padding: 0, 10px;
+  font-size: 18px;
+  width: 30px;
+  height: 43px;
+  background: transparent;
+  border: 0 solid;
+}
+$duracion:0.4s;
+$stroke: #3feb9f;
+$colorText: #222222;
+$colorTextChecked: #85e6e4;
+
+.todo {
+  display: block;
+  position: relative;
+  padding: 1em 1em 1em 16%;
+  margin: 0 auto;
+  cursor: pointer;
+  border-bottom: solid 1px #ddd;
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+.todo.new-item{
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeIn .3s linear forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
